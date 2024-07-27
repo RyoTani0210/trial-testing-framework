@@ -1,88 +1,12 @@
 {
-    "created": 1722064802.963809,
-    "duration": 0.012382268905639648,
-    "exitcode": 0,
+    "created": 1722089257.3146305,
+    "duration": 0.007265329360961914,
+    "exitcode": 4,
     "root": "/home/ryotani/trial-testing-framework",
     "environment": {},
     "summary": {
-        "passed": 2,
-        "total": 2,
-        "collected": 2
+        "total": 0,
+        "collected": 0
     },
-    "collectors": [
-        {
-            "nodeid": "",
-            "outcome": "passed",
-            "result": [
-                {
-                    "nodeid": "test_pytest.py",
-                    "type": "Module"
-                }
-            ]
-        },
-        {
-            "nodeid": "test_pytest.py",
-            "outcome": "passed",
-            "result": [
-                {
-                    "nodeid": "test_pytest.py::test_add",
-                    "type": "Function",
-                    "lineno": 7
-                },
-                {
-                    "nodeid": "test_pytest.py::test_subtract",
-                    "type": "Function",
-                    "lineno": 12
-                }
-            ]
-        }
-    ],
-    "tests": [
-        {
-            "nodeid": "test_pytest.py::test_add",
-            "lineno": 7,
-            "outcome": "passed",
-            "keywords": [
-                "test_add",
-                "test_pytest.py",
-                "trial-testing-framework",
-                ""
-            ],
-            "setup": {
-                "duration": 0.0001553940001031151,
-                "outcome": "passed"
-            },
-            "call": {
-                "duration": 0.000152356999933545,
-                "outcome": "passed"
-            },
-            "teardown": {
-                "duration": 9.574100022291532e-05,
-                "outcome": "passed"
-            }
-        },
-        {
-            "nodeid": "test_pytest.py::test_subtract",
-            "lineno": 12,
-            "outcome": "passed",
-            "keywords": [
-                "test_subtract",
-                "test_pytest.py",
-                "trial-testing-framework",
-                ""
-            ],
-            "setup": {
-                "duration": 8.358299965038896e-05,
-                "outcome": "passed"
-            },
-            "call": {
-                "duration": 0.0011196960003871936,
-                "outcome": "passed"
-            },
-            "teardown": {
-                "duration": 0.00014469200050371,
-                "outcome": "passed"
-            }
-        }
-    ]
+    "tests": []
 }

@@ -12,3 +12,6 @@ pytest --json-report --json-report-file=pytest_reports/report.json test_pytest.p
 python format_json.py pytest_reports/report.json pytest_reports/report.json
 
 
+#カバレッジ計測
+pytest --cov=main tests
+pytest --cov=main --cov-report=html tests

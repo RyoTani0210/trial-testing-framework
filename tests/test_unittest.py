@@ -1,5 +1,5 @@
 import unittest
-from moduleOne import add, subtract
+from main.moduleOne import add, subtract
 from json_test_runner import JSONTestRunner
 
 # テストケースクラスの定義(通常モジュールごとやクラスごと)

@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="0.017" timestamp="2024-07-27T16:20:02.391756+09:00" hostname="ryotani"><testcase classname="test_pytest" name="test_add" time="0.000" /><testcase classname="test_pytest" name="test_subtract" time="0.000" /></testsuite></testsuites>
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="0" time="0.007" timestamp="2024-07-27T23:07:36.767010+09:00" hostname="ryotani" /></testsuites>

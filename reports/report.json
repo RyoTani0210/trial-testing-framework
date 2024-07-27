@@ -1,0 +1,88 @@
+{
+    "created": 1722064170.0803032,
+    "duration": 0.013763189315795898,
+    "exitcode": 0,
+    "root": "/home/ryotani/trial-testing-framework",
+    "environment": {},
+    "summary": {
+        "passed": 2,
+        "total": 2,
+        "collected": 2
+    },
+    "collectors": [
+        {
+            "nodeid": "",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_pytest.py",
+                    "type": "Module"
+                }
+            ]
+        },
+        {
+            "nodeid": "test_pytest.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_pytest.py::test_add",
+                    "type": "Function",
+                    "lineno": 7
+                },
+                {
+                    "nodeid": "test_pytest.py::test_subtract",
+                    "type": "Function",
+                    "lineno": 12
+                }
+            ]
+        }
+    ],
+    "tests": [
+        {
+            "nodeid": "test_pytest.py::test_add",
+            "lineno": 7,
+            "outcome": "passed",
+            "keywords": [
+                "test_add",
+                "test_pytest.py",
+                "trial-testing-framework",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00018734900004346855,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.00012636399969778722,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00010843100062629674,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_pytest.py::test_subtract",
+            "lineno": 12,
+            "outcome": "passed",
+            "keywords": [
+                "test_subtract",
+                "test_pytest.py",
+                "trial-testing-framework",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00011223799992876593,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.0010980589995597256,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00011795699992944719,
+                "outcome": "passed"
+            }
+        }
+    ]
+}

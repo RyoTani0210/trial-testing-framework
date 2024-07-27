@@ -1,10 +1,6 @@
-# test_unittest.py
-
-
-
 import unittest
 from moduleOne import add, subtract
-import HtmlTestRunner
+from json_test_runner import JSONTestRunner
 
 # テストケースクラスの定義(通常モジュールごとやクラスごと)
 class testModuleOne(unittest.TestCase):
@@ -32,9 +28,5 @@ class testModuleOne(unittest.TestCase):
 
 # テストスクリプトが直接実行されたときにテストを実行
 if __name__ == '__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='html_report'))
-    # テスト結果を 'unittest_report.xml' に出力するための設定
-    with open('/home/ryotani/trial-testing-framework/unittest_report.xml', 'wb') as output:
-        # XML形式のテストランナーを使ってテストを実行
-        # テスト結果が標準出力ではなく、unittest_report.xml ファイルに書き込まれます。
-        unittest.main(testRunner=xmlrunner.XMLTestRunner(output=output))
+    runner = JSONTestRunner('unittest_reports/unittest_report.json')  # JSONTestRunnerを使用して出力ファイルを指定
+    unittest.main(testRunner=runner)  # カスタムテストランナーでテストを実行

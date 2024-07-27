@@ -3,6 +3,8 @@
 import pytest
 from moduleOne import add, subtract
 
+#pytest
+#pytest では、関数の名前を test_ で始めるだけでテスト関数と認識されるため、クラスの定義が不要です。これにより、コードが短く、読みやすくなります。
 def test_add():
     assert add(3, 4) == 7, "Should be 7"
     assert add(-1, 1) == 0, "Should be 0"

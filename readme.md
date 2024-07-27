@@ -22,3 +22,8 @@ pytest
 XML, HTMLでのレポート出力が可能
 
 ### カバレッジ計測
+
+
+### その他
+
+unittestのテストはpytestでも実行可能

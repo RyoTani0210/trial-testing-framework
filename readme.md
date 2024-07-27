@@ -10,12 +10,8 @@
 # 調査結果
 ## テスト結果の出力
 ### unittest
-XML形式での出力は無理?
+XML形式での出力は無理
     `unittest-xml-reporting`と`xmlrunner`が必要だが、`xmlrunner`のインストールができなかった
+カスタムテストランナーを作成すれば任意のフォーマットで出せる
 
-```
-pip install xmlrunner
-> error: subprocess-exited-with-error
-
-```
 ### pytest

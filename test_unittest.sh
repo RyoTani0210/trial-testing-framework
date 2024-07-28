@@ -1,2 +1,5 @@
 #!/bin/bash
-python test_unittest.py
+python tests/test_unittest.py
+
+#カバレッジ計測
+coverage run -m unittest discover

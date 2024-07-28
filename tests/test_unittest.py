@@ -1,5 +1,5 @@
 import unittest
-from main.moduleOne import add, subtract
+from main.moduleOne import *
 from json_test_runner import JSONTestRunner
 
 # テストケースクラスの定義(通常モジュールごとやクラスごと)
@@ -25,6 +25,14 @@ class testModuleOne(unittest.TestCase):
         self.assertEqual(subtract(-1, 1), -2, "Should be -2")
         # テストケース3: 0 - 0 = 0
         self.assertEqual(subtract(0, 0), 0, "Should be 0")
+
+    def test_decision(self):
+        self.assertEqual(decision(True,True), 1, "1になってほしい")
+        self.assertEqual(decision(True,False), 2, "2になってほしい")
+        self.assertEqual(decision(False,True), 2, "エラーになってほしい")
+        # カバレッジされないものを出すためにfalse,falseはなし
+        
+
 
 # テストスクリプトが直接実行されたときにテストを実行
 if __name__ == '__main__':

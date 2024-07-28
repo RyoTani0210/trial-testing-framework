@@ -1,17 +1,19 @@
-pytest -v test_pytest.py
+pytest -v tests/test_pytest.py
 
 # Junit xlm形式
-pytest --junitxml=pytest_reports/report.xml test_pytest.py
+pytest --junitxml=pytest_reports/report.xml tests/test_pytest.py
 
 # html形式
-pytest --html=pytest_reports/report.html test_pytest.py
+pytest --html=pytest_reports/report.html tests/test_pytest.py
 
 # json形式
-pytest --json-report --json-report-file=pytest_reports/report.json test_pytest.py
+pytest --json-report --json-report-file=pytest_reports/report.json tests/test_pytest.py
 ##改行して読みやすく
 python format_json.py pytest_reports/report.json pytest_reports/report.json
 
+# unittestのコードも実行できる
+pytest -v tests
 
-#カバレッジ計測
+#カバレッジ計測(unittestのコードも実行される)
 pytest --cov=main tests
 pytest --cov=main --cov-report=html tests

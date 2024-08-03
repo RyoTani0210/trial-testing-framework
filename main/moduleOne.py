@@ -17,3 +17,17 @@ def decision(a, b):
     else:
         return 4
 
+def covaregeTestfunction(a, b):
+    """カバレッジ計測用関数
+    """
+    x = a + b #ステートメント1 (必ず通る)
+
+    if (a>1 & x>1):
+        x = 100 #ステートメントメント2 (aが負の数かxが負の数なら通らない)
+    if (x < -1):
+        x = -100  #ステートメント3(xが正から0なら通らない)
+    
+    return x
+
+
+    

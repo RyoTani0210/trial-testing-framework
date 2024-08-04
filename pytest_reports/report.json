@@ -1,12 +1,175 @@
 {
-    "created": 1722130389.261394,
-    "duration": 0.008229732513427734,
-    "exitcode": 4,
+    "created": 1722688881.2646072,
+    "duration": 0.0421605110168457,
+    "exitcode": 1,
     "root": "/home/ryotani/trial-testing-framework",
     "environment": {},
     "summary": {
-        "total": 0,
-        "collected": 0
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "collected": 4
     },
-    "tests": []
+    "collectors": [
+        {
+            "nodeid": "",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "tests/test_pytest.py",
+                    "type": "Module"
+                }
+            ]
+        },
+        {
+            "nodeid": "tests/test_pytest.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "tests/test_pytest.py::test_add",
+                    "type": "Function",
+                    "lineno": 7
+                },
+                {
+                    "nodeid": "tests/test_pytest.py::test_subtract",
+                    "type": "Function",
+                    "lineno": 12
+                },
+                {
+                    "nodeid": "tests/test_pytest.py::test_decision",
+                    "type": "Function",
+                    "lineno": 17
+                },
+                {
+                    "nodeid": "tests/test_pytest.py::test_coverageTestFunction",
+                    "type": "Function",
+                    "lineno": 22
+                }
+            ]
+        }
+    ],
+    "tests": [
+        {
+            "nodeid": "tests/test_pytest.py::test_add",
+            "lineno": 7,
+            "outcome": "passed",
+            "keywords": [
+                "test_add",
+                "test_pytest.py",
+                "tests",
+                "trial-testing-framework",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00044919600009052374,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.00016778299982433964,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00014104299998507486,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_pytest.py::test_subtract",
+            "lineno": 12,
+            "outcome": "passed",
+            "keywords": [
+                "test_subtract",
+                "test_pytest.py",
+                "tests",
+                "trial-testing-framework",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0001281319998724939,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.0001364859999739565,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0001244389998191764,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_pytest.py::test_decision",
+            "lineno": 17,
+            "outcome": "failed",
+            "keywords": [
+                "test_decision",
+                "test_pytest.py",
+                "tests",
+                "trial-testing-framework",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00011582999991333054,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.00034035100020446407,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/home/ryotani/trial-testing-framework/tests/test_pytest.py",
+                    "lineno": 21,
+                    "message": "AssertionError: Error test\nassert 4 == 2\n +  where 4 = decision(False, False)"
+                },
+                "traceback": [
+                    {
+                        "path": "tests/test_pytest.py",
+                        "lineno": 21,
+                        "message": "AssertionError"
+                    }
+                ],
+                "longrepr": "def test_decision():\n        assert decision(True, True) == 1, \"Should be 1\"\n        assert decision(True, False) == 2, \"Should be 2\"\n>       assert decision(False, False) == 2, \"Error test\"\nE       AssertionError: Error test\nE       assert 4 == 2\nE        +  where 4 = decision(False, False)\n\ntests/test_pytest.py:21: AssertionError"
+            },
+            "teardown": {
+                "duration": 0.00020770399987668497,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_pytest.py::test_coverageTestFunction",
+            "lineno": 22,
+            "outcome": "failed",
+            "keywords": [
+                "test_coverageTestFunction",
+                "test_pytest.py",
+                "tests",
+                "trial-testing-framework",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00010833000010279648,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.000163091000104032,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/home/ryotani/trial-testing-framework/tests/test_pytest.py",
+                    "lineno": 24,
+                    "message": "assert 0\n +  where 0 = covaregeTestfunction(0, 0)"
+                },
+                "traceback": [
+                    {
+                        "path": "tests/test_pytest.py",
+                        "lineno": 24,
+                        "message": "AssertionError"
+                    }
+                ],
+                "longrepr": "def test_coverageTestFunction():\n>       assert covaregeTestfunction(0, 0)#statement1\u3057\u304b\u901a\u3089\u306a\u3044\nE       assert 0\nE        +  where 0 = covaregeTestfunction(0, 0)\n\ntests/test_pytest.py:24: AssertionError"
+            },
+            "teardown": {
+                "duration": 0.0001557929999762564,
+                "outcome": "passed"
+            }
+        }
+    ]
 }

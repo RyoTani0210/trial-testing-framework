@@ -17,7 +17,24 @@ def test_subtract():
 
 
 
-def test_coverageTestFunction():
-    # assert covaregeTestfunction(0, 0) == 0, "statement1しか通らない"
-    assert covaregeTestfunction(1, 0) == 100, "statement1と2を通る"
-    assert covaregeTestfunction(0, -10) == -100, "statement1と3を通る"
+def test_coverageTestFunction_C0():
+    """
+    C0(ステートメントカバレッジ)
+    """
+    assert covaregeTestfunction(1, 1) == "YY"
+
+# def test_coverageTestFunction_C1():
+#     """
+#     C1(ディシジョンカバレッジ)。コードカバレッジも100%
+#     """
+#     assert covaregeTestfunction(1, 1) == "YY"
+#     assert covaregeTestfunction(-1, -1) == "NN"
+
+# def test_coverageTestFunction_C2():
+#     """
+#     C2(コンディションカバレッジ)
+#     """
+#     assert covaregeTestfunction(1, 1) == "YY"
+#     assert covaregeTestfunction(-1, -1) == "NN"
+#     assert covaregeTestfunction(1,- 1) == "YN"
+#     assert covaregeTestfunction(1, -1) == "YN"

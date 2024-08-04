@@ -10,14 +10,23 @@ def subtract(a, b):
 
 def covaregeTestfunction(a, b):
     """カバレッジ計測用関数
+    C0なら、(a,b)=(1,1) 1ケース実行で網羅できる
+    C1なら、(a,b)=(1,1),(-1,-1) の２ケースで網羅できる
+    C2なら、(a,b)=(1,1),(-1,-1),(1,-1),(-1,1)の4ケースで網羅できる
     """
-    x = a + b #ステートメント1 (必ず通る)
+    x = []
 
-    if (a>1 & x>1):
-        return 100 #ステートメントメント2 (aが負の数かxが負の数なら通らない)
-    if (x < -1):
-        return -100  #ステートメント3(xが正から0なら通らない)
+    if (a > 0):
+        x.append("Y")
+    else :
+        x.append("N")
+        
+    if (b > 0):
+        x.append("Y")
+    else:
+        x.append("N")
 
+    return "".join(x)
 
 
     

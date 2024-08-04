@@ -1,1 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="0" time="0.007" timestamp="2024-07-28T10:33:08.650836+09:00" hostname="ryotani" /></testsuites>
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="4" time="0.048" timestamp="2024-08-03T21:41:20.565794+09:00" hostname="ryotani"><testcase classname="tests.test_pytest" name="test_add" time="0.001" /><testcase classname="tests.test_pytest" name="test_subtract" time="0.000" /><testcase classname="tests.test_pytest" name="test_decision" time="0.001"><failure message="AssertionError: Error test&#10;assert 4 == 2&#10; +  where 4 = decision(False, False)">def test_decision():
+        assert decision(True, True) == 1, "Should be 1"
+        assert decision(True, False) == 2, "Should be 2"
+&gt;       assert decision(False, False) == 2, "Error test"
+E       AssertionError: Error test
+E       assert 4 == 2
+E        +  where 4 = decision(False, False)
+
+tests/test_pytest.py:21: AssertionError</failure></testcase><testcase classname="tests.test_pytest" name="test_coverageTestFunction" time="0.001"><failure message="assert 0&#10; +  where 0 = covaregeTestfunction(0, 0)">def test_coverageTestFunction():
+&gt;       assert covaregeTestfunction(0, 0)#statement1しか通らない
+E       assert 0
+E        +  where 0 = covaregeTestfunction(0, 0)
+
+tests/test_pytest.py:24: AssertionError</failure></testcase></testsuite></testsuites>

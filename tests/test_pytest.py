@@ -23,12 +23,12 @@ def test_coverageTestFunction_C0():
     """
     assert covaregeTestfunction(1, 1) == "YY"
 
-# def test_coverageTestFunction_C1():
-#     """
-#     C1(ディシジョンカバレッジ)。コードカバレッジも100%
-#     """
-#     assert covaregeTestfunction(1, 1) == "YY"
-#     assert covaregeTestfunction(-1, -1) == "NN"
+def test_coverageTestFunction_C1():
+    """
+    C1(ディシジョンカバレッジ)。コードカバレッジも100%
+    """
+    assert covaregeTestfunction(1, 1) == "YY"
+    assert covaregeTestfunction(-1, -1) == "NN"
 
 # def test_coverageTestFunction_C2():
 #     """

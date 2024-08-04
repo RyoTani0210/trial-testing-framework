@@ -26,11 +26,6 @@ class testModuleOne(unittest.TestCase):
         # テストケース3: 0 - 0 = 0
         self.assertEqual(subtract(0, 0), 0, "Should be 0")
 
-    def test_decision(self):
-        self.assertEqual(decision(True,True), 1, "1になってほしい")
-        self.assertEqual(decision(True,False), 2, "2になってほしい")
-        self.assertEqual(decision(False,True), 2, "エラーになってほしい")
-        # カバレッジされないものを出すためにfalse,falseはなし
         
 
 

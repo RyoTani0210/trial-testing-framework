@@ -15,8 +15,9 @@ def test_subtract():
     assert subtract(-1, 1) == -2, "Should be -2"
     assert subtract(0, 0) == 0, "Should be 0"
 
-def test_decision():
-    assert decision(True, True) == 1, "Should be 1"
-    assert decision(True, False) == 2, "Should be 2"
-    assert decision(False, False) == 2, "Error test"
-    
+
+
+def test_coverageTestFunction():
+    # assert covaregeTestfunction(0, 0) == 0, "statement1しか通らない"
+    assert covaregeTestfunction(1, 0) == 100, "statement1と2を通る"
+    assert covaregeTestfunction(0, -10) == -100, "statement1と3を通る"

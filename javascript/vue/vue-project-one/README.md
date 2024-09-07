@@ -19,6 +19,12 @@
     }
     ```
 
+## その他モジュール
+- axios (HTTPリクエストモジュール)
+  ```
+  npm install axios
+  ```
+
 
 ## Project setup
 ```

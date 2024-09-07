@@ -1,11 +1,12 @@
 # Jest
 
 ## インストール方法
+  プロジェクトフォルダを作成し、jestをインストールする
 
 ```
+mkdir my-jest-project
+cd my-jest-project
+npm init -y #package.jsonファイル作成
 
-mkdir jest-project-one
-cd jest-project-one
-
-npm install --save-dev jest
+npm install --save-dev jest #インストール
 ```

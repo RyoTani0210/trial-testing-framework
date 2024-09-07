@@ -1,5 +1,19 @@
 # vue-project-one
 
+## jest setup
+- jest install
+- settings
+  - package.json
+    ```
+    {
+    "scripts": {
+        "test": "jest",
+        "test:unit": "vue-cli-service test:unit"
+    }
+    }
+    ```
+    
+
 ## Project setup
 ```
 npm install

@@ -9,6 +9,9 @@ module.exports = {
       '^@/(.*)$': '<rootDir>/src/$1',  // "@/..." のエイリアスを解決
     },
     moduleFileExtensions: ['js', 'jsx', 'json', 'vue'],
+    transformIgnorePatterns: [
+        '/node_modules/(?!(axios)/)', // axiosなど特定のESモジュールをトランスフォーム対象にする
+      ],
     testMatch: ['**/tests/unit/**/*.test.[jt]s?(x)',], // テストコードのpath指定
   };
   

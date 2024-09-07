@@ -25,6 +25,9 @@
   - jest.config.js
     ```
     {
+      transformIgnorePatterns: [
+        '/node_modules/(?!(axios)/)', // axiosなど特定のESモジュールをトランスフォーム対象にする
+      ],
       testMatch: ['**/tests/unit/**/*.test.[jt]s?(x)', '**/tests/unit/**/*.spec.[jt]s?(x)'], // 追加
     }
     ```

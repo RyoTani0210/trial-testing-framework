@@ -2,6 +2,12 @@
 
 ## jest setup
 - jest install
+  ```
+  npm install @vue/test-utils jest
+  npm install -g @vue/cli
+  npm install --save-dev @vue/cli-plugin-unit-jest
+  npm install --save-dev @vue/vue3-jest
+  ```
 - settings
   - package.json
     ```
@@ -12,7 +18,7 @@
     }
     }
     ```
-    
+
 
 ## Project setup
 ```

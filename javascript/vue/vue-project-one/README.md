@@ -9,7 +9,7 @@
   npm install --save-dev @vue/vue3-jest@27 #@vue/cli-plugin-unit-jestがver27に依存している
   npm install --save-dev @vue/test-utils
 
-  npm install --save-dev @babel/core @babel/preset-env babel-jest
+  npm install --save-dev @babel/core @babel/preset-env babel-jest@27
 
   ```
 - settings

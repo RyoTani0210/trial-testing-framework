@@ -10,3 +10,16 @@ npm init -y #package.jsonファイル作成
 
 npm install --save-dev jest #インストール
 ```
+
+## テストの実行
+
+```
+npm test
+```
+
+
+## カバレッジ計測
+
+```
+npm test -- --coverage
+```

@@ -1,6 +1,13 @@
 # vue-project-one
 
-## Project setup
+テスト用プロジェクト
+
+## setup
+### jestのインストール
+
+
+## Vue関係
+### Project install
 ```
 npm install
 ```

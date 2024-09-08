@@ -1,5 +1,5 @@
 // timeUtils.test.js
-import { getCurrentTime } from './envUtils';
+import { getCurrentTime } from './main/envUtils';
 
 describe('getCurrentTime関数のテスト', () => {
   let originalDate;

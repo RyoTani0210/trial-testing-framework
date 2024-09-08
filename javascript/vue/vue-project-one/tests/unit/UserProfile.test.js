@@ -26,31 +26,31 @@ describe('UserProfile.vue', () => {
     // DOMの更新が終わるまで待つための設定
     // vmはvueのインスタンス
     // $nextTickはタスクキューの次のタスクの実行。このコードではコールスタックが空になったことを確認するために使っている
+    await wrapper.vm.fetchUser();
     await wrapper.vm.$nextTick();
 
 
-    //評価値取得
-    const actualUrl = axios.get.mock.calls[0][0];
-    const expectedUrl = 'https://mockapi.example.com/user';
+    // //評価値取得
+    // const actualUrl = axios.get.mock.calls[0][0];
+    // const expectedUrl = 'https://mockapi.example.com/user';
 
     //評価
-    expect(actualUrl).toBe(expectedUrl);
-    //エラーのときの確認用
-    if (actualUrl !== expectedUrl) {
-      console.log(`Expected URL: ${expectedUrl}, but received: ${actualUrl}`);
-    }
-
+    expect(axios.get).toHaveBeenCalledWith('https://mockapi.example.com/user');
     expect(wrapper.text()).toContain('Name: John Doe');
     expect(wrapper.text()).toContain('Email: john.doe@example.com');
   });
 
   it('APIエラーの表示', async () => {
+    //エラーのモック作成
     axios.get.mockRejectedValue(new Error('API Error'));
 
+    //テスト準備
     const wrapper = mount(UserProfile);
-
+    //同期待ち
+    await wrapper.vm.fetchUser();
     await wrapper.vm.$nextTick();
 
+    //評価
     expect(wrapper.text()).toContain('Failed to fetch user data');
   });
 
@@ -62,10 +62,12 @@ describe('UserProfile.vue', () => {
       data: { name: 'Jane Doe', email: 'jane.doe@example.com' },
     });
 
+    //テスト準備
     const wrapper = mount(UserProfile);
-
+    await wrapper.vm.fetchUser();
     await wrapper.vm.$nextTick();
 
+    //評価
     expect(axios.get).toHaveBeenCalledWith('/api/user');
     expect(wrapper.text()).toContain('Name: Jane Doe');
     expect(wrapper.text()).toContain('Email: jane.doe@example.com');

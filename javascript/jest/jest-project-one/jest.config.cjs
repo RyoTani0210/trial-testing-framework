@@ -1,5 +1,5 @@
 // jest.config.js
-export default {
+module.exports = {
   // preset: 'ts-jest/presets/default-esm', // ESMのサポートを追加
   transform: {
     '^.+\\.m?[tj]sx?$': 'babel-jest', // ES Modulesを変換するためにbabel-jestを使用

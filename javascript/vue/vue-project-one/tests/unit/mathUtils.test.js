@@ -1,5 +1,5 @@
 // mathUtils.test.js
-const { add, subtract, multiply, reverseString, findMax } = require('../../main/mathUtils');
+const { add, subtract, multiply, reverseString, findMax } = require('../main/mathUtils');
 
 // add関数のテスト
 test('adds 1 + 2 to equal 3', () => {

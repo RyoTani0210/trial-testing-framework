@@ -1,5 +1,9 @@
 # vue-project-one
 
+- vueが生成したDOMの検証をするテスト
+- `npm test`で実行できる 
+
+
 ## jest setup
 - jest install
   ```
@@ -15,6 +19,7 @@
 - settings
   - package.json
     ```
+
     {
       "scripts": {
         "test": "jest",
@@ -22,6 +27,7 @@
       }
     }
     ```
+    
   - jest.config.js
     ```
     {
@@ -39,7 +45,7 @@
     }
     ```
 
-## その他モジュール
+### その他モジュールのセットアップ
 - axios (HTTPリクエストモジュール)
   ```
   npm install axios

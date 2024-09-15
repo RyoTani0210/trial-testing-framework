@@ -28,7 +28,6 @@ describe('getCurrentTime関数のテスト', () => {
     const currentTime = getCurrentTime();
 
     // テスト結果の確認
-    console.log(`Fixed time: ${currentTime}`);
     expect(currentTime).toContain('12:00'); // 12時が含まれることを確認
   });
 
@@ -39,9 +38,6 @@ describe('getCurrentTime関数のテスト', () => {
     // 関数の実行
     const currentTime = getCurrentTime();
 
-    // テスト結果の表示
-    console.log(`Current time in Tokyo: ${currentTime}`);
-
     // 実際のテスト評価
     expect(currentTime).toBeTruthy(); // 具体的な時間の一致を検証する場合は、モックされた日時を比較
   });
@@ -51,9 +47,6 @@ describe('getCurrentTime関数のテスト', () => {
     delete process.env.TIME_ZONE;
 
     const currentTime = getCurrentTime();
-
-    console.log(`Current time in UTC: ${currentTime}`);
-
     expect(currentTime).toBeTruthy();
   });
 });
